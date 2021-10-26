@@ -19,6 +19,15 @@ public class test{
         
         queue = new PriorityQueue<>((a,b)->Integer.compare(a.chunkNo, b.chunkNo));
         startingChunk = 0;
+        Character[] data1 = {'a','b'};
+        Character[] data2 = {'i',' '};
+        Character[] data3 = {'c','d'};
+        receive(1 ,data1);
+        receive(2 ,data2);
+        receive(3 ,data3);
+
+        ArrayList<Character> ans = read();
+        Display(ans);
 
         //Here the receive and read functions can be called to register or return chunk and its data.
 
@@ -54,5 +63,10 @@ public class test{
 
 
         return answer;
+    }
+    public static void Display(ArrayList<Character> arr){
+        for(int i=0;i<arr.size();i++){
+            System.out.print(arr.get(i)+" ");
+        }
     }
 }
